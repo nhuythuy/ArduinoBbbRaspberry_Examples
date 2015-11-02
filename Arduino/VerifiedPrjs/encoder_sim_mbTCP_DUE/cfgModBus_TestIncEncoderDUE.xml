@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<csIOcfg FileVersion="1" Timestamp="2015-03-04T15:35:30" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="cyberseaIO" xsi:schemaLocation="cyberseaIO csIOcfg.xsd">
+  <IODriver DisableLoading="false" Index="0">
+    <InstanceName>mbTcpMaster</InstanceName>
+    <DLLName>Modbus_master</DLLName>
+    <SampleRates>
+      <SetDataMultiple>1</SetDataMultiple>
+      <GetDataMultiple>1</GetDataMultiple>
+    </SampleRates>
+    <DriverSpecific>
+      <ModbusMasterConfig>
+        <ModbusTCPAddress>
+          <Ip>192.168.1.9</Ip>
+          <Port>502</Port>
+          <Timeout>500</Timeout>
+        </ModbusTCPAddress>
+        <Nodes>
+          <Node>
+            <Name>node</Name>
+            <SlaveID>1</SlaveID>
+            <ContinuousAddressSpace>1</ContinuousAddressSpace>
+            <PollingInterval>500</PollingInterval>
+            <MaxReadRegistersNum>125</MaxReadRegistersNum>
+            <MaxReadInputsNum>125</MaxReadInputsNum>
+            <MaxWriteRegistersNum>100</MaxWriteRegistersNum>
+            <MaxReadCoilsNum>2000</MaxReadCoilsNum>
+            <MaxReadDiscretesNum>2000</MaxReadDiscretesNum>
+            <MaxWriteCoilsNum>800</MaxWriteCoilsNum>
+          </Node>
+        </Nodes>
+      </ModbusMasterConfig>
+    </DriverSpecific>
+    <SendSignals>
+      <Signal AppIndex="0" DriverIndex="0" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Int16</DataType>
+            <Area>4</Area>
+            <Reference>5</Reference>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>Module0.failureMode</Tag>
+        <VendorTag>FailureMode</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="1" DriverIndex="1" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Int16</DataType>
+            <Area>4</Area>
+            <Reference>7</Reference>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>Module0.pulseCount</Tag>
+        <VendorTag>PulseCount</VendorTag>
+        <DefaultValue>200</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="2" DriverIndex="2" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Int16</DataType>
+            <Area>4</Area>
+            <Reference>8</Reference>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>Module0.pulsesPerRevolution</Tag>
+        <VendorTag>PulsesPerRev</VendorTag>
+        <DefaultValue>1023</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="3" DriverIndex="3" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Int16</DataType>
+            <Area>4</Area>
+            <Reference>6</Reference>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>Module0.pulseWidth</Tag>
+        <VendorTag>PulseWidth</VendorTag>
+        <DefaultValue>4</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="4" DriverIndex="4" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Int16</DataType>
+            <Area>4</Area>
+            <Reference>9</Reference>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>Module1.failureMode</Tag>
+        <VendorTag>FailureMode</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="5" DriverIndex="5" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Int16</DataType>
+            <Area>4</Area>
+            <Reference>11</Reference>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>Module1.pulseCount</Tag>
+        <VendorTag>PulseCount</VendorTag>
+        <DefaultValue>200</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="6" DriverIndex="6" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Int16</DataType>
+            <Area>4</Area>
+            <Reference>12</Reference>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>Module1.pulsesPerRevolution</Tag>
+        <VendorTag>PulsesPerRev</VendorTag>
+        <DefaultValue>1023</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="7" DriverIndex="7" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Int16</DataType>
+            <Area>4</Area>
+            <Reference>10</Reference>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>Module1.pulseWidth</Tag>
+        <VendorTag>PulseWidth</VendorTag>
+        <DefaultValue>1</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="8" DriverIndex="8" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Int16</DataType>
+            <Area>4</Area>
+            <Reference>13</Reference>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>Module2.failureMode</Tag>
+        <VendorTag>FailureMode</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="9" DriverIndex="9" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Int16</DataType>
+            <Area>4</Area>
+            <Reference>15</Reference>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>Module2.pulseCount</Tag>
+        <VendorTag>PulseCount</VendorTag>
+        <DefaultValue>200</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="10" DriverIndex="10" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Int16</DataType>
+            <Area>4</Area>
+            <Reference>16</Reference>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>Module2.pulsesPerRevolution</Tag>
+        <VendorTag>PulsesPerRev</VendorTag>
+        <DefaultValue>1023</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="11" DriverIndex="11" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Int16</DataType>
+            <Area>4</Area>
+            <Reference>14</Reference>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>Module2.pulseWidth</Tag>
+        <VendorTag>PulseWidth</VendorTag>
+        <DefaultValue>2</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="12" DriverIndex="12" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Bit</DataType>
+            <Area>4</Area>
+            <Reference>1</Reference>
+            <BitNum>0</BitNum>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.DisableEnc0</Tag>
+        <VendorTag>DisableEnc0</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="13" DriverIndex="13" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Bit</DataType>
+            <Area>4</Area>
+            <Reference>1</Reference>
+            <BitNum>1</BitNum>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.DisableEnc1</Tag>
+        <VendorTag>DisableEnc1</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="14" DriverIndex="14" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Bit</DataType>
+            <Area>4</Area>
+            <Reference>1</Reference>
+            <BitNum>2</BitNum>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.DisableEnc2</Tag>
+        <VendorTag>DisableEnc2</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="15" DriverIndex="15" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Bit</DataType>
+            <Area>4</Area>
+            <Reference>1</Reference>
+            <BitNum>3</BitNum>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.DisableEnc3</Tag>
+        <VendorTag>DisableEnc3</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="16" DriverIndex="16" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Bit</DataType>
+            <Area>4</Area>
+            <Reference>1</Reference>
+            <BitNum>4</BitNum>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.DisableEnc4</Tag>
+        <VendorTag>DisableEnc4</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="17" DriverIndex="17" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Bit</DataType>
+            <Area>4</Area>
+            <Reference>1</Reference>
+            <BitNum>5</BitNum>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.DisableEnc5</Tag>
+        <VendorTag>DisableEnc5</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="18" DriverIndex="18" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Bit</DataType>
+            <Area>4</Area>
+            <Reference>1</Reference>
+            <BitNum>6</BitNum>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.DisableEnc6</Tag>
+        <VendorTag>DisableEnc6</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="19" DriverIndex="19" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Bit</DataType>
+            <Area>4</Area>
+            <Reference>1</Reference>
+            <BitNum>7</BitNum>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.DisableEnc7</Tag>
+        <VendorTag>DisableEnc7</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="20" DriverIndex="20" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Bit</DataType>
+            <Area>4</Area>
+            <Reference>1</Reference>
+            <BitNum>8</BitNum>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.DisableEnc8</Tag>
+        <VendorTag>DisableEnc8</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="21" DriverIndex="21" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Bit</DataType>
+            <Area>4</Area>
+            <Reference>1</Reference>
+            <BitNum>9</BitNum>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.DisableEnc9</Tag>
+        <VendorTag>DisableEnc9</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="22" DriverIndex="22" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Bit</DataType>
+            <Area>4</Area>
+            <Reference>1</Reference>
+            <BitNum>10</BitNum>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.DisableEncA</Tag>
+        <VendorTag>DisableEncA</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="23" DriverIndex="23" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Bit</DataType>
+            <Area>4</Area>
+            <Reference>1</Reference>
+            <BitNum>15</BitNum>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.DisableEncAllChZ</Tag>
+        <VendorTag>DisableEncAllChZ</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="24" DriverIndex="24" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Bit</DataType>
+            <Area>4</Area>
+            <Reference>1</Reference>
+            <BitNum>11</BitNum>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.DisableEncB</Tag>
+        <VendorTag>DisableEncB</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="25" DriverIndex="25" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Bit</DataType>
+            <Area>4</Area>
+            <Reference>1</Reference>
+            <BitNum>12</BitNum>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.DisableEncGrp0ChZ</Tag>
+        <VendorTag>DisableGrp0ChZ</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="26" DriverIndex="26" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Bit</DataType>
+            <Area>4</Area>
+            <Reference>1</Reference>
+            <BitNum>13</BitNum>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.DisableEncGrp1ChZ</Tag>
+        <VendorTag>DisableGrp1ChZ</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="27" DriverIndex="27" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Bit</DataType>
+            <Area>4</Area>
+            <Reference>1</Reference>
+            <BitNum>14</BitNum>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.DisableEncGrp2ChZ</Tag>
+        <VendorTag>DisableGrp2ChZ</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="28" DriverIndex="28" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Int16</DataType>
+            <Area>4</Area>
+            <Reference>2</Reference>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.GeneralSettings</Tag>
+        <VendorTag>GeneralSettings</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="29" DriverIndex="29" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Int16</DataType>
+            <Area>4</Area>
+            <Reference>3</Reference>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.Reserved1</Tag>
+        <VendorTag>Reserved1</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+      <Signal AppIndex="30" DriverIndex="30" notSimulated="1">
+        <DriverSpecific>
+          <ModbusSignalAddress>
+            <Node>node</Node>
+            <DataType>Int16</DataType>
+            <Area>4</Area>
+            <Reference>4</Reference>
+          </ModbusSignalAddress>
+        </DriverSpecific>
+        <Tag>ModuleSettings.Reserved2</Tag>
+        <VendorTag>Reserved2</VendorTag>
+        <DefaultValue>0</DefaultValue>
+        <Scaling>
+          <NoScale />
+        </Scaling>
+      </Signal>
+    </SendSignals>
+    <ReceiveSignals />
+  </IODriver>
+</csIOcfg>
